@@ -28,8 +28,8 @@ public class Calendar {
 		Calendar cal = new Calendar();
 		System.out.print("원하는 월을 입력하세요 : ");
 		int month = sc.nextInt();
-				
-		System.out.printf("%d 월은 %d 일 까지 있습니다! \n", month, cal.getMaxDaysOfMonth(month));
+		System.out.println("at Home");		
+		System.out.printf("%d 월은 %d 일 까지 있습니다!\n", month, cal.getMaxDaysOfMonth(month));
 		
 		cal.printSampleCalendar();	
 		sc.close();
