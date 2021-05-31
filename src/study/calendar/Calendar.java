@@ -22,15 +22,26 @@ public class Calendar {
 	public static void main(String[] args) {
 	
 		// 숫자 입력받아 해당월의 최대일수 출력
+		String PROMPT	 = "cal> ";
 		Scanner sc = new Scanner(System.in);
 		Calendar cal = new Calendar();
 		//System.out.print("원하는 월을 입력하세요 : ");
 		System.out.print("반복횟수를 입력하세요 : ");
-		int repeat = sc.nextInt();
 		
-		for (int i=0; i<repeat; i++) {
-			System.out.print("원하는 월을 입력하세요 : ");
-			int month = sc.nextInt();
+		//int repeat = sc.nextInt();
+		
+		int month = 1;
+		//for (int i=0; i<repeat; i++) {
+		while (true) {
+			System.out.println("원하는 월을 입력하세요 : ");
+			System.out.print(PROMPT);
+			month = sc.nextInt();
+			if (month == -1) {
+				break;
+			}
+			if (month > 12) {
+				continue;
+			}
 			System.out.printf("%d 월은 %d 일 까지 있습니다!\n", month, cal.getMaxDaysOfMonth(month));	
 		}
 		
